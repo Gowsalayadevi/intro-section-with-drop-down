@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+:root{
+    --almost-white:hsl(0, 0%, 98%);
+    --medium-gray:hsl(0, 0%, 41%);
+    --almost-black:hsl(0, 0%, 8%);
+    --fs-body:1rem;
+    --ff-primary:'Epilogue', sans-serif;
+    --fs-h1:2rem;
+}
+
+/*******typography****/
+body{
+    font-family: var(--ff-primary);
+    background-color: var(--almost-white);
+    font-size: var(--fs-body);
+    
+}
+h1{
+    
+    font-size: var(--fs-h1);
+    color:var(--almost-black);
+    margin:1em 0;  
+}
+p{
+   
+    font-size: var(--fs-body);
+    color:var(--medium-gray);
+    line-height: 1.4;
+    padding:0 10px;
+    
+}
+.btn{
+    display:inline-block;
+    
+     font-size: .9rem;
+     cursor:pointer;
+     padding:10px;
+     border:none;
+     border-radius:10px;
+     letter-spacing: 1px;
+     cursor:pointer;
+}
+.btn-login,
+.btn-register{
+    color: var(--almost-black);
+    background: var(--almost-white);
+       
+}
+.btn-register{
+    border:2px solid var(--almost-black);  
+}
+h1,
+p,
+a{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:var(--almost-black);
+}
+ul{
+    list-style: none;
+}
+img{
+    width:100%;
+    object-fit: contain;
+}
+/*** header***/
+.icon{
+    width:10px;
+    height:10px;
+    margin-left:5px;
+}
+.icon-up{
+    display:none;
+}
+
+.hamburger,
+.hamburger-close{
+    display:none;
+}
+.client-logo{
+    width:20%;
+    height:20%;
+}
+.logo{
+    width:100px;
+}
+header{
+    background-color:var(--almost-white);
+    max-width:1200px;
+    margin:0 auto;
+    
+}
+.header-container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:15px 40px;
+}
+.main-header{
+    width:10%;
+}
+nav{
+    width:90%;
+   
+}
+.nav-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-items{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    margin-left:50px;
+    gap:20px;
+}
+.main-list{
+    color:var(--almost-black);
+    position:relative;
+    cursor:pointer;
+    display:flex;
+    align-items: center;
+}
+
+.sublist{ 
+    display:none; 
+    position:absolute;
+    background: white;
+    top:35px;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 0 28px 2px rgba(0, 0, 0, 0.199);
+    z-index:1;  
+     
+}
+
+.main-list:first-child:hover .sublist{
+    display:block;
+    right:0;
+}
+.main-list:hover .sublist{
+    display:block;
+}
+.main-list:hover .icon-down{
+    display:none;
+}
+.main-list:hover .icon-up{
+    display:block;
+}
+
+
+
+
+.sublist li{
+    white-space:nowrap;
+    padding:10px;
+}
+.sublist-icon{
+    width:20px;
+    height:20px;
+    margin-right:10px;
+}
+
+@media (max-width:660px){
+    .hamburger{
+        display:block;
+    }
+    .header-container{
+        justify-content: space-between;
+    }
+ nav{
+     display:none;
+     width:200px;
+     position:fixed;
+     background-color: var(--almost-white);
+     top:0;
+     right:0;
+     bottom:0;
+     height:100%;
+     padding-top:30px;
+ }
+ .nav-content{
+     display:flex;
+     justify-content: space-around;
+     flex-direction: column;
+     height:70vh;
+ }
+ .main-items
+ {
+     flex-direction: column;    
+     align-self: flex-start;
+     margin-left:15px;
+
+ }
+ .main-list{
+     flex-wrap: wrap;
+
+ }
+ .sublist{ 
+     width:100%;
+    position:initial; 
+    box-shadow: none;
+    border-radius: 0px;
+    z-index: 0;
+    background:none;
+
+}
+
+ 
+ .account{
+     display:flex;
+     align-self:center; 
+     justify-content: center;
+     flex-direction: column;  
+     margin-left:15px;
+     gap:10px;
+
+ }
+.btn-login{
+    display:block;   
+    padding:10px 70px;
+}
+
+}
+
+
+/***layout***/
+.intro-container{
+    width:100%;
+    min-height:100vh;
+    margin:0 auto;
+}
+
+
+.clients{
+    margin-top: 2.1em;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;  
+}
+
+
+@media (min-width:750px){
+    .intro-container{
+        max-width:1200px;
+        height:100vh;
+        display:flex;
+        flex-direction:row-reverse;
+        align-items: center;
+        gap:20px;
+    }
+    .image-banner{
+        max-height: 100vh;
+    }
+    
+    }
+
+       
+
+
+    
+
